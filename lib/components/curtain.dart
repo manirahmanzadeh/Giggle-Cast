@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:weather/components/reveal_clipper.dart';
-import 'package:weather/constants/colors.dart';
 
-class Curtain1 extends StatelessWidget {
-  const Curtain1({
+class Curtain extends StatelessWidget {
+  const Curtain({
     super.key,
-    required this.containerHeight,
+    required this.height,
+    required this.curtainColor,
+    required this.openCurtain,
   });
 
-  final double containerHeight;
+  final double height;
+  final Color curtainColor;
+  final Function() openCurtain;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +23,15 @@ class Curtain1 extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Container(
-              key: curtainKey,
-              color: AppColors.curtain1,
-              width: MediaQuery.sizeOf(context).width,
-              height: containerHeight,
-            ),
+            InkWell(
+              onTap: openCurtain,
+              child: Container(
+                key: curtainKey,
+                color: curtainColor,
+                width: MediaQuery.sizeOf(context).width,
+                height: height,
+              ),
+            )
           ],
         ),
         Positioned(

@@ -14,9 +14,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Visible Area Example'),
+        title: const Text('Giggle Cast'),
       ),
-      body: Stack(
+      body: const Stack(
         children: [
           Curtain1(containerHeight: 250),
         ],

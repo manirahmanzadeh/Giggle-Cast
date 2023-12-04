@@ -8,7 +8,7 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: HomeScreen(),
-      title: 'Weather App',
+      title: 'Giggle Cast',
     );
   }
 }

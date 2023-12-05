@@ -1,5 +1,7 @@
 # Giggle Cast (Hava Chitor)
 
+![Giggle Cast (Hava Chitor)](screen.gif)
+
 ## Overview
 
 The Giggle Cast is a simple Flutter application that provides users with mock weather data. It features a user-friendly interface displaying current weather conditions, including temperature, weather description, and an animated reveal effect.
@@ -10,4 +12,3 @@ The Giggle Cast is a simple Flutter application that provides users with mock we
 - **Animated Reveal Effect**: Experience a visually appealing animated reveal effect as the weather information is displayed.
 
 
-![Animated Reveal Effect](screen.gif)

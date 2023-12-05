@@ -1,16 +1,10 @@
-# weather
+# Giggle Cast
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+The Giggle Cast is a simple Flutter application that provides users with mock weather data. It features a user-friendly interface displaying current weather conditions, including temperature, weather description, and an animated reveal effect.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Current Weather Display**: View the current weather conditions for a mocked location.
+- **Animated Reveal Effect**: Experience a visually appealing animated reveal effect as the weather information is displayed.

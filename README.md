@@ -8,3 +8,6 @@ The Giggle Cast is a simple Flutter application that provides users with mock we
 
 - **Current Weather Display**: View the current weather conditions for a mocked location.
 - **Animated Reveal Effect**: Experience a visually appealing animated reveal effect as the weather information is displayed.
+
+
+![Animated Reveal Effect](screen.gif)

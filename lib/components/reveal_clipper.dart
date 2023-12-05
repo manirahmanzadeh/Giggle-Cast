@@ -23,7 +23,7 @@ class RevealClipper extends CustomClipper<Rect> {
     if (bottomOverlap > 0) {
       return Rect.fromPoints(Offset(0.0, size.height - bottomOverlap), Offset(size.width, size.height));
     }
-    return Rect.fromPoints(const Offset(0.0, 00.0),  Offset(size.width, size.height));
+    return Rect.fromPoints(const Offset(0.0, 00.0),  const Offset(0, 0));
   }
 
   @override

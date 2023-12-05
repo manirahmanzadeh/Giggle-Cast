@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: AppColors.curtain4,
       appBar: AppBar(
-        title: const Text('Giggle Cast'),
+        title: const Text('Giggle Cast (Hava Chitor)'),
         backgroundColor: AppColors.appbarColor,
       ),
       body: Stack(

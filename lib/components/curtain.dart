@@ -36,44 +36,45 @@ class Curtain extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double appBarHeight = AppBar().preferredSize.height;
     double statusBarHeight = MediaQuery.of(context).padding.top;
-    double bodyHeight = screenHeight - appBarHeight - statusBarHeight;
+    double bottomPadding = MediaQuery.of(context).padding.bottom;
+    double bodyHeight = screenHeight - appBarHeight - statusBarHeight - bottomPadding;
     return Stack(
       children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            InkWell(
-              onTap: openCurtain,
-              child: Container(
-                key: curtainKey,
-                color: curtainColor,
-                width: MediaQuery.sizeOf(context).width,
-                height: height,
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      time,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white60,
-                      ),
+        AnimatedPositioned(
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.ease,
+          top: bodyHeight - height,
+          child: InkWell(
+            onTap: openCurtain,
+            child: Container(
+              key: curtainKey,
+              color: curtainColor,
+              width: MediaQuery.sizeOf(context).width,
+              height: bodyHeight,
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    time,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white60,
                     ),
-                    Text(
-                      temperature > 1 ? '+$temperature°' : '$temperature°',
-                      style: const TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                      ),
+                  ),
+                  Text(
+                    temperature > 1 ? '+$temperature°' : '$temperature°',
+                    style: const TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            )
-          ],
+            ),
+          ),
         ),
         AnimatedPositioned(
           duration: const Duration(milliseconds: 1000),
